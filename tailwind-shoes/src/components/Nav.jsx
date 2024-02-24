@@ -16,7 +16,7 @@ export function Nav() {
     ]
 
     return (
-        <nav className="flex flex-wrap items-center justify-between">
+        <nav className="z-10 relative flex flex-wrap items-center justify-between">
             {/* Logo */}
             <a href="#">
                 <NikeLogo className="h-20 w-20" />
@@ -34,9 +34,9 @@ export function Nav() {
                     {ROUTES.map((route, index) => {
                         return (
                             <li
-                                className={`cursor-pointer rounded px-3 py-2 ${index === 0
+                                className={`lg:hover:text-blue-500 lg:hover:bg-transparent cursor-pointer rounded px-3 py-2 ${index === 0
                                     ? "bg-blue-500 text-white lg:bg-transparent lg:text-blue-500"
-                                    : "hover:bg-gray-100"} `}
+                                    : "hover:bg-gray-100"} ${(index == 3 || index == 4) && "lg:text-white"}`}
                                 key={route}>{route}
                             </li>
                         )
@@ -44,8 +44,8 @@ export function Nav() {
                 </ul>
             </div>
             {/* Cart Button */}
-            <div className="fixed bottom-4 left-4 lg:static">
-                <div className="flex-center h-12 w-12 rounded-full bg-white shadow-md">
+            <div className="fixed bottom-4 left-4 lg:static lg:mr-8">
+                <div className="flex-center h-12 w-12 cursor-pointer rounded-full bg-white shadow-md">
                     <button><TbShoppingBag /></button>
                 </div>
             </div>
