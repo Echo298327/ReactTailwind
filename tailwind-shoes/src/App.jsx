@@ -1,9 +1,9 @@
-
+import { Nav } from "./components/Nav"
 export function App() {
 
   return (
-    <div className="text-4xl">Hello Tailwind Friends!</div>
+    <div className="p-10 xl:px-24">
+      <Nav />
+    </div>
   )
 }
-
-export default App
