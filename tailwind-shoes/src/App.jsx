@@ -2,7 +2,7 @@
 export function App() {
 
   return (
-    <div className="text-4xl">Hello Tailwind Friends</div>
+    <div className="text-4xl">Hello Tailwind Friends!</div>
   )
 }
 
